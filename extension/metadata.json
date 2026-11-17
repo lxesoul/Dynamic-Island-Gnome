@@ -1,0 +1,16 @@
+{
+  "uuid": "dynamic-island@ubuntu26.gnome.org",
+  "name": "Dynamic Island — By Lxe Soul",
+  "description": "Floating ultra-transparent glass Dynamic Island for GNOME Shell 50.1 on Ubuntu 26.04 LTS — By Lxe Soul. Features Classic Black hardware capsule when idle, song-reactive dynamic theming, circular song banner artwork, MPRIS controls (Spotify & browser sessions), PipeWire/Gvc audio mixer, backlight brightness, Quick Settings, live Blur tuner, and Pomodoro/Clipboard studio.",
+  "shell-version": [
+    "50"
+  ],
+  "version": 2,
+  "version-name": "2.0.0",
+  "url": "https://github.com/LxeSoul/gnome-dynamic-island",
+  "settings-schema": "org.gnome.shell.extensions.dynamic-island",
+  "gettext-domain": "dynamic-island@ubuntu26.gnome.org",
+  "session-modes": [
+    "user"
+  ]
+}

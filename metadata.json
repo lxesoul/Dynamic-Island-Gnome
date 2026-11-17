@@ -1,0 +1,6 @@
+{
+  "name": "GNOME Dynamic Island — Ubuntu 26.04 & GNOME 50.1 Extension",
+  "description": "By Lxe Soul — Production-grade native GNOME Shell 50.1 extension with Classic Black idle capsule, song-reactive theme, MPRIS media integration, Gvc audio mixer, backlight brightness, quick settings, live blur tuner, Pomodoro studio, and installation-ready ZIP package.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

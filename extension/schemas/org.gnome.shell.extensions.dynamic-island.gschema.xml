@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="dynamic-island@ubuntu26.gnome.org">
+  <enum id="org.gnome.shell.extensions.dynamic-island.IslandPosition">
+    <value nick="top-center" value="0"/>
+    <value nick="top-left" value="1"/>
+    <value nick="top-right" value="2"/>
+  </enum>
+
+  <enum id="org.gnome.shell.extensions.dynamic-island.AnimationSpeed">
+    <value nick="fast" value="0"/>
+    <value nick="normal" value="1"/>
+    <value nick="relaxed" value="2"/>
+  </enum>
+
+  <enum id="org.gnome.shell.extensions.dynamic-island.CompactAppearance">
+    <value nick="minimal" value="0"/>
+    <value nick="media-progress" value="1"/>
+    <value nick="system-pill" value="2"/>
+  </enum>
+
+  <enum id="org.gnome.shell.extensions.dynamic-island.ExpandedAppearance">
+    <value nick="full" value="0"/>
+    <value nick="media-focused" value="1"/>
+    <value nick="controls-compact" value="2"/>
+  </enum>
+
+  <enum id="org.gnome.shell.extensions.dynamic-island.MonitorMode">
+    <value nick="primary" value="0"/>
+    <value nick="follow-focus" value="1"/>
+    <value nick="all" value="2"/>
+  </enum>
+
+  <schema id="org.gnome.shell.extensions.dynamic-island" path="/org/gnome/shell/extensions/dynamic-island/">
+    <key name="island-position" enum="org.gnome.shell.extensions.dynamic-island.IslandPosition">
+      <default>'top-center'</default>
+      <summary>Island horizontal position</summary>
+      <description>Horizontal anchor position of the Dynamic Island on the target monitor.</description>
+    </key>
+
+    <key name="use-custom-position" type="b">
+      <default>false</default>
+      <summary>Use custom dragged position</summary>
+      <description>When enabled, positions the Dynamic Island at the user-dragged coordinates instead of the preset anchor.</description>
+    </key>
+
+    <key name="custom-x" type="i">
+      <default>-1</default>
+      <range min="-1" max="7680"/>
+      <summary>Custom horizontal position (px)</summary>
+      <description>Monitor-relative X coordinate saved after dragging the Dynamic Island.</description>
+    </key>
+
+    <key name="custom-y" type="i">
+      <default>-1</default>
+      <range min="-1" max="4320"/>
+      <summary>Custom vertical position (px)</summary>
+      <description>Monitor-relative Y coordinate saved after dragging the Dynamic Island.</description>
+    </key>
+
+    <key name="monitor-mode" enum="org.gnome.shell.extensions.dynamic-island.MonitorMode">
+      <default>'primary'</default>
+      <summary>Multi-monitor placement mode</summary>
+      <description>Controls whether the island renders on the primary monitor, focused monitor, or all monitors.</description>
+    </key>
+
+    <key name="top-offset" type="i">
+      <default>36</default>
+      <range min="4" max="120"/>
+      <summary>Top vertical offset in pixels</summary>
+      <description>Distance from the top edge of the monitor workarea so the island sits cleanly below the GNOME top bar.</description>
+    </key>
+
+    <key name="compact-width" type="i">
+      <default>224</default>
+      <range min="150" max="420"/>
+      <summary>Compact pill width</summary>
+      <description>Width of the Dynamic Island in compact media state (pixels).</description>
+    </key>
+
+    <key name="compact-height" type="i">
+      <default>32</default>
+      <range min="26" max="56"/>
+      <summary>Compact pill height</summary>
+      <description>Height of the Dynamic Island in compact state (pixels).</description>
+    </key>
+
+    <key name="expanded-width" type="i">
+      <default>464</default>
+      <range min="360" max="680"/>
+      <summary>Expanded panel width</summary>
+      <description>Width of the Dynamic Island in expanded state (pixels).</description>
+    </key>
+
+    <key name="expanded-height" type="i">
+      <default>432</default>
+      <range min="220" max="540"/>
+      <summary>Expanded panel height</summary>
+      <description>Target height of the Dynamic Island in expanded state (pixels).</description>
+    </key>
+
+    <key name="corner-radius" type="i">
+      <default>26</default>
+      <range min="12" max="40"/>
+      <summary>Corner radius in pixels</summary>
+      <description>Border radius for expanded and focus states; compact state remains pill-shaped.</description>
+    </key>
+
+    <key name="background-opacity" type="d">
+      <default>0.04</default>
+      <range min="0.04" max="0.90"/>
+      <summary>Glass opacity</summary>
+      <description>Translucent dark glass surface opacity (0.04 = 96% max transparency over the wallpaper).</description>
+    </key>
+
+    <key name="background-color" type="s">
+      <default>'#0B0E16'</default>
+      <summary>Background tint color</summary>
+      <description>Base tint color used for the translucent glass surface in #RRGGBB format.</description>
+    </key>
+
+    <key name="blur-intensity" type="i">
+      <default>10</default>
+      <range min="0" max="60"/>
+      <summary>Glass blur radius</summary>
+      <description>Compositor Shell.BlurEffect subtle background blur intensity (0 disables blur, 10 applies gentle frost blur).</description>
+    </key>
+
+    <key name="border-opacity" type="d">
+      <default>0.22</default>
+      <range min="0.02" max="0.45"/>
+      <summary>Glass border opacity</summary>
+      <description>Opacity of the subtle outer glass edge highlight.</description>
+    </key>
+
+    <key name="shadow-intensity" type="d">
+      <default>0.55</default>
+      <range min="0.0" max="1.0"/>
+      <summary>Shadow intensity</summary>
+      <description>Strength of the soft floating drop shadow beneath the Dynamic Island.</description>
+    </key>
+
+    <key name="animation-speed" enum="org.gnome.shell.extensions.dynamic-island.AnimationSpeed">
+      <default>'normal'</default>
+      <summary>Animation speed preset</summary>
+      <description>Controls duration and spring curve pacing for state transitions.</description>
+    </key>
+
+    <key name="compact-appearance" enum="org.gnome.shell.extensions.dynamic-island.CompactAppearance">
+      <default>'media-progress'</default>
+      <summary>Compact mode appearance</summary>
+      <description>Selects what is emphasized inside the compact pill.</description>
+    </key>
+
+    <key name="expanded-appearance" enum="org.gnome.shell.extensions.dynamic-island.ExpandedAppearance">
+      <default>'full'</default>
+      <summary>Expanded layout appearance</summary>
+      <description>Controls visual density of the expanded glass control panel.</description>
+    </key>
+
+    <key name="enable-media" type="b">
+      <default>true</default>
+      <summary>Enable MPRIS media module</summary>
+      <description>Show Spotify and browser MPRIS media playback controls.</description>
+    </key>
+
+    <key name="enable-audio" type="b">
+      <default>true</default>
+      <summary>Enable audio mixer module</summary>
+      <description>Show master volume, microphone mute, and PipeWire output/input device selectors.</description>
+    </key>
+
+    <key name="enable-brightness" type="b">
+      <default>true</default>
+      <summary>Enable brightness module</summary>
+      <description>Show screen backlight brightness controls when supported hardware is present.</description>
+    </key>
+
+    <key name="enable-quick-settings" type="b">
+      <default>true</default>
+      <summary>Enable quick settings module</summary>
+      <description>Show Wi-Fi, Bluetooth, Battery, Night Light, and Do Not Disturb tiles.</description>
+    </key>
+
+    <key name="show-album-artwork" type="b">
+      <default>true</default>
+      <summary>Show album artwork</summary>
+      <description>Display cover art thumbnails in compact, expanded, and focus media views.</description>
+    </key>
+
+    <key name="auto-expand-on-music" type="b">
+      <default>true</default>
+      <summary>Auto-expand when music starts</summary>
+      <description>Show a temporary glass music notification when playback starts or track changes.</description>
+    </key>
+
+    <key name="auto-expand-on-volume" type="b">
+      <default>true</default>
+      <summary>Show temporary volume HUD</summary>
+      <description>Briefly expand the pill to show volume changes when collapsed.</description>
+    </key>
+
+    <key name="auto-expand-on-brightness" type="b">
+      <default>true</default>
+      <summary>Show temporary brightness HUD</summary>
+      <description>Briefly expand the pill to show brightness changes when collapsed.</description>
+    </key>
+
+    <key name="auto-collapse-delay" type="i">
+      <default>3000</default>
+      <range min="1200" max="8000"/>
+      <summary>Auto-collapse delay (ms)</summary>
+      <description>Duration before temporary smart HUD expansions return to compact mode.</description>
+    </key>
+  </schema>
+</schemalist>

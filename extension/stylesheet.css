@@ -1,0 +1,494 @@
+/* GNOME Dynamic Island — Ultra-Transparent Crystal Glass, Classic Black Capsule & Bubble Icon Stylesheet (GNOME Shell 50.1) */
+/* By Lxe Soul */
+
+.di-island-container {
+    background-color: rgba(11, 14, 22, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 999px;
+    box-shadow: none;
+    color: #f8fafc;
+    transition-duration: 180ms;
+}
+
+/* Compact Pill State */
+.di-compact-view {
+    spacing: 8px;
+    padding: 0 8px;
+    min-height: 28px;
+}
+
+/* Classic Black Apple Dynamic Island Hardware Capsule (Idle Mode) */
+.di-classic-capsule {
+    spacing: 10px;
+    padding: 0 11px;
+}
+
+.di-classic-sensor {
+    width: 11px;
+    height: 11px;
+    border-radius: 999px;
+    background-color: rgba(17, 20, 28, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.di-classic-lens {
+    width: 13px;
+    height: 13px;
+    border-radius: 999px;
+    background-color: rgba(14, 22, 42, 0.96);
+    border: 1.5px solid rgba(56, 189, 248, 0.28);
+}
+
+.di-classic-lens-core {
+    width: 5px;
+    height: 5px;
+    border-radius: 999px;
+    background-color: rgba(56, 189, 248, 0.65);
+}
+
+.di-compact-bubble {
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    background-color: rgba(56, 189, 248, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    color: #7dd3fc;
+}
+
+.di-compact-art-frame {
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.di-compact-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+.di-compact-meta {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+.di-compact-right-pill {
+    border-radius: 999px;
+    padding: 2px 8px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.di-compact-status-icon {
+    color: #38bdf8;
+}
+
+/* Lightweight Equalizer Bars */
+.di-eq-box {
+    spacing: 2px;
+    padding: 0 2px;
+}
+
+.di-eq-bar {
+    border-radius: 999px;
+}
+
+.di-eq-bar-active {
+    background-color: #38bdf8;
+}
+
+.di-eq-bar-paused {
+    background-color: rgba(248, 250, 252, 0.65);
+}
+
+/* Smart Transient HUD Views */
+.di-hud-view {
+    margin: 4px;
+    padding: 6px 10px;
+    border-radius: 999px;
+}
+
+.di-hud-music-row {
+    spacing: 12px;
+}
+
+.di-hud-indicator-row {
+    spacing: 10px;
+}
+
+/*
+ * Expanded & Focus Glass Panels
+ * CRITICAL: 8px margin insets the inner view box so Shell.BlurEffect's corner (8,8)
+ * is strictly inside the outer 26px border-radius circle (distance 25.45px < 26px).
+ * Zero rectangular blur corners can ever protrude when hovering!
+ */
+.di-expanded-view,
+.di-focus-view {
+    margin: 8px;
+    padding: 6px 8px 8px 8px;
+    spacing: 9px;
+    border-radius: 20px;
+}
+
+.di-panel-header {
+    spacing: 8px;
+    padding-bottom: 2px;
+}
+
+.di-header-badge {
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    background-color: rgba(56, 189, 248, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #7dd3fc;
+}
+
+.di-panel-heading {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.80);
+}
+
+/* Glass Bubble Sections */
+.di-section-box {
+    background-color: rgba(15, 23, 42, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 22px;
+    padding: 9px 12px;
+    spacing: 7px;
+    box-shadow: none;
+}
+
+.di-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #f1f5f9;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+    padding-top: 2px;
+}
+
+.di-media-row {
+    spacing: 11px;
+}
+
+.di-art-button {
+    width: 46px;
+    height: 46px;
+    border-radius: 999px;
+    background-color: rgba(56, 189, 248, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: none;
+}
+
+.di-art-button:hover {
+    background-color: rgba(56, 189, 248, 0.30);
+    box-shadow: none;
+}
+
+.di-title-btn {
+    border-radius: 999px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.di-title-btn:hover,
+.di-title-btn:focus,
+.di-title-btn:active {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.di-artwork-icon,
+.di-artwork-banner {
+    border-radius: 999px;
+}
+
+.di-artwork-fallback {
+    color: #7dd3fc;
+}
+
+.di-media-meta {
+    spacing: 2px;
+}
+
+.di-track-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+.di-track-subtitle {
+    font-size: 11.5px;
+    color: rgba(241, 245, 249, 0.90);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.80);
+}
+
+.di-media-controls {
+    spacing: 7px;
+}
+
+/* 3D Glass Bubble Buttons */
+.di-icon-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    box-shadow: none;
+    color: #ffffff;
+    transition-duration: 140ms;
+}
+
+.di-icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.26);
+    border-color: rgba(255, 255, 255, 0.42);
+    box-shadow: none;
+}
+
+.di-icon-btn:active {
+    background-color: rgba(56, 189, 248, 0.32);
+    box-shadow: none;
+}
+
+.di-primary-circle-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background-color: rgba(56, 189, 248, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: none;
+    color: #06101e;
+    transition-duration: 140ms;
+}
+
+.di-primary-circle-btn:hover {
+    background-color: #7dd3fc;
+    box-shadow: none;
+}
+
+.di-btn-alert {
+    background-color: rgba(244, 63, 94, 0.32);
+    border-color: rgba(251, 113, 133, 0.55);
+    color: #ffe4e6;
+}
+
+.di-row-bubble-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background-color: rgba(251, 191, 36, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    color: #fde68a;
+}
+
+.di-progress-row {
+    spacing: 8px;
+    padding-top: 2px;
+}
+
+.di-time-label {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #f1f5f9;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.80);
+}
+
+.di-progress-track {
+    height: 5px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.20);
+}
+
+.di-progress-fill {
+    height: 5px;
+    border-radius: 999px;
+    background-color: #38bdf8;
+}
+
+.di-brightness-fill {
+    height: 5px;
+    border-radius: 999px;
+    background-color: #fbbf24;
+}
+
+.di-slider-row {
+    spacing: 10px;
+}
+
+.di-row-icon {
+    color: #ffffff;
+}
+
+.di-percent-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+    min-width: 36px;
+    text-align: right;
+}
+
+.di-muted-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #e2e8f0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.80);
+}
+
+/* Quick Settings Bubble Capsules */
+.di-qs-row {
+    spacing: 8px;
+}
+
+.di-qs-tile {
+    border-radius: 20px;
+    padding: 8px 6px;
+    background-color: rgba(15, 23, 42, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: none;
+    color: #f8fafc;
+    transition-duration: 140ms;
+}
+
+.di-qs-tile:hover {
+    background-color: rgba(255, 255, 255, 0.20);
+    border-color: rgba(255, 255, 255, 0.36);
+    box-shadow: none;
+}
+
+.di-qs-active {
+    background-color: rgba(56, 189, 248, 0.26);
+    border-color: rgba(125, 211, 252, 0.58);
+    color: #ffffff;
+}
+
+.di-qs-disabled {
+    opacity: 0.48;
+}
+
+.di-qs-icon-bubble {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    color: #ffffff;
+}
+
+.di-qs-icon-bubble-active {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background-color: rgba(56, 189, 248, 0.38);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    color: #ffffff;
+}
+
+.di-qs-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+    padding-top: 4px;
+}
+
+/* Interactive Utility & Blur Tuner Bar */
+.di-utility-row {
+    spacing: 7px;
+    padding-top: 1px;
+}
+
+.di-utility-pill {
+    border-radius: 999px;
+    padding: 5px 10px;
+    background-color: rgba(15, 23, 42, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: none;
+    color: #f8fafc;
+    font-size: 11px;
+    font-weight: 700;
+    transition-duration: 140ms;
+}
+
+.di-utility-pill:hover {
+    background-color: rgba(255, 255, 255, 0.20);
+    border-color: rgba(255, 255, 255, 0.38);
+    box-shadow: none;
+}
+
+.di-utility-pill-active {
+    background-color: rgba(16, 185, 129, 0.28);
+    border-color: rgba(110, 231, 183, 0.58);
+    color: #ecfdf5;
+}
+
+.di-blur-stepper-box {
+    border-radius: 999px;
+    padding: 2px 4px;
+    spacing: 4px;
+    background-color: rgba(15, 23, 42, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.di-blur-step-btn {
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: none;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.di-blur-step-btn:hover {
+    background-color: rgba(255, 255, 255, 0.28);
+    box-shadow: none;
+}
+
+.di-blur-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #f1f5f9;
+    padding: 0 3px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+}
+
+.di-device-list {
+    spacing: 6px;
+}
+
+.di-device-btn {
+    border-radius: 16px;
+    padding: 8px 12px;
+    background-color: rgba(15, 23, 42, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    box-shadow: none;
+    color: #f8fafc;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.di-device-btn:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: none;
+}
+
+.di-device-active {
+    background-color: rgba(56, 189, 248, 0.28);
+    border-color: rgba(125, 211, 252, 0.58);
+    color: #ffffff;
+}
